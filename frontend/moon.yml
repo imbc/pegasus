@@ -1,0 +1,13 @@
+language: 'typescript'
+
+tasks:
+  build:
+    command: 'tsc && vite build'
+    outputs:
+      - 'dist'
+  lint:
+    command: 'eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0'
+  dev:
+    command: 'vite'
+  preview:
+    command: 'vite preview'

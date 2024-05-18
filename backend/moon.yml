@@ -1,0 +1,13 @@
+language: wing
+
+tasks:
+  build:
+    command: wing compile main.w
+    outputs:
+      - target
+  test:
+    command: wing test
+  sim:
+    command: wing it main.w
+  terraform:
+    command: terraform init

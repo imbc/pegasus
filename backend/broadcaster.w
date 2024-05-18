@@ -10,7 +10,7 @@ pub class Broadcaster {
     this.server = new websockets.WebSocket(name: "counters");
     this.url = this.server.url;
     this.clients = new cloud.Bucket();
- 
+
     // upon connection, add the client to the list
     this.server.onConnect(inflight(id: str) => {
       log("new connection {id}");
