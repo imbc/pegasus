@@ -1,13 +1,28 @@
-language: 'typescript'
-
+language: typescript
 tasks:
   build:
-    command: 'tsc && vite build'
-    outputs:
-      - 'dist'
-  lint:
-    command: 'eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0'
+    command:
+    - vite
+    - build
+    deps:
+    - ~:build-dep1
+    platform: node
+  build-dep1:
+    command: tsc
+    platform: node
   dev:
-    command: 'vite'
+    command: vite
+    local: true
+    platform: node
+  lint:
+    command:
+    - eslint
+    - .
+    - --ext
+    - ts,tsx
+    - --report-unused-disable-directives
+    - --max-warnings
+    - '0'
+    platform: node
   preview:
-    command: 'vite preview'
+    command: vite preview

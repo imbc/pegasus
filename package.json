@@ -7,5 +7,9 @@
   },
   "scripts": {
     "dev": "cd backend && wing it"
+  },
+  "packageManager": "npm@10.2.4",
+  "engines": {
+    "node": "20.11.0"
   }
 }
