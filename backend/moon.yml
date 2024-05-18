@@ -1,19 +1,18 @@
 language: wing
-
 tasks:
+  apply:
+    command: terraform -chdir=./target/main.tfaws apply
   build:
     command: wing compile --platform tf-aws main.w
     outputs:
-      - target
-  test:
-    command: wing test
+    - target
+  destroy:
+    command: terraform -chdir=./target/main.tfaws destroy
+  plan:
+    command: terraform -chdir=./target/main.tfaws plan
   sim:
     command: wing it main.w
   terraform:
     command: terraform -chdir=./target/main.tfaws init
-  plan:
-    command: terraform -chdir=./target/main.tfaws plan
-  apply:
-    command: terraform -chdir=./target/main.tfaws apply
-  destroy:
-    command: terraform -chdir=./target/main.tfaws destroy
+  test:
+    command: wing test
