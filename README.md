@@ -16,6 +16,13 @@ Wing it:
 npm i && npm run dev
 ```
 
+## Monorepo
+
+Managed with [moon](https://moonrepo.dev/). Run the commands through moon:
+
+- List the project details: `moon project <project>`
+- Run specific command: `moon run <project>:<task>`
+
 ## License
 
 Licensed under the Apache 2.0 License.
