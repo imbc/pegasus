@@ -6,6 +6,7 @@
   "license": "MIT",
   "wing": true,
   "dependencies": {
+    "winglang": "^0.73.52",
     "@winglibs/vite": "^0.1.1",
     "@winglibs/websockets": "^0.3.2"
   }
